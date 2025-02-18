@@ -117,7 +117,7 @@ function checkForWinner() {
     for (let combo of winningCombos) {
       const [a, b, c] = combo;
       if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-        winner = turn; // Store the actual winning player
+        winner = turn;
         return;
       }
     }
@@ -126,7 +126,7 @@ function checkForWinner() {
 // Check for a tie
 function checkForTie() {
   if (winner) return;
-  tie = board.every(cell => cell !== ''); // If no empty spaces, it's a tie
+  tie = board.every(cell => cell !== '');
 }
 
 // Switch player turns
